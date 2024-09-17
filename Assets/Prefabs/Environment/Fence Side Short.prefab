@@ -64,9 +64,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5243429764341388831, guid: 5bfa4bfcf674fef4b8925aff574fa9e4, type: 3}
+      propertyPath: m_Size.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5243429764341388831, guid: 5bfa4bfcf674fef4b8925aff574fa9e4, type: 3}
+      propertyPath: m_Center.x
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 6522542991352880563, guid: 5bfa4bfcf674fef4b8925aff574fa9e4, type: 3}
       propertyPath: m_Name
       value: Fence Side Short
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903735612203394317, guid: 5bfa4bfcf674fef4b8925aff574fa9e4, type: 3}
+      propertyPath: m_Center.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7903735612203394317, guid: 5bfa4bfcf674fef4b8925aff574fa9e4, type: 3}
+      propertyPath: m_Extents.x
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -8,7 +8,9 @@ using UnityEngine;
 
 namespace Assets.Scripts.Audio
 {
-    // Class used to play music, uses coroutines to replay one track
+    /// <summary>
+    /// Class used to play music, uses coroutines to replay one track
+    /// </summary>
     public class AmbienceMusic : MonoBehaviour
     {
         private AudioSource music;
@@ -23,6 +25,10 @@ namespace Assets.Scripts.Audio
             StartCoroutine(MusicPlayerRoutine());
         }
 
+        /// <summary>
+        /// Describes routine to start and replay ambience music clip
+        /// </summary>
+        /// <returns> IEnumerator to use in Coroutine </returns>
         private IEnumerator MusicPlayerRoutine()
         {
             var wait = new WaitForSeconds(1);

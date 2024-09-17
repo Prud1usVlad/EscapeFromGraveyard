@@ -4,7 +4,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 namespace Assets.Scripts.Controllers
 {
-    // Controlls movement and basic behaviour of the player
+    /// <summary>
+    /// Controlls movement and basic behaviour of the player
+    /// </summary>
     public class PlayerController : MonoBehaviour
     {
         // Private fields
@@ -18,10 +20,13 @@ namespace Assets.Scripts.Controllers
         [SerializeField]
         private InputActionReference moveInput;
         [SerializeField]
+        private InputActionReference sprintInput;
+        [SerializeField]
         private InputActionReference lookInput;
 
         // Public fields, may be modified from other scripts
-        public float speed = 5;
+        public float walkSpeed = 5;
+        public float runSpeed = 10;
         public float lookSensivity = 0.5f;
 
         public void Start()
@@ -39,10 +44,14 @@ namespace Assets.Scripts.Controllers
             HandleLook();
         }
 
-        // Movement logic using new input system
+        /// <summary>
+        /// Movement logic using new input system
+        /// </summary>
+        // 
         private void HandleMovement()
         {
             var moveDirection = moveInput.action.ReadValue<Vector2>();
+            var isSprinting = sprintInput.action.IsPressed();
 
             // Toggling animations
             if (moveDirection != Vector2.zero) 
@@ -52,11 +61,14 @@ namespace Assets.Scripts.Controllers
 
             var direction = transform.right * moveDirection.x +
                 transform.forward * moveDirection.y;
+            var speed = (isSprinting) ? runSpeed : walkSpeed;
 
             characterController.SimpleMove(direction * speed);
         }
 
-        // Looking logic using new input system
+        /// <summary>
+        /// Looking logic using new input system
+        /// </summary>
         private void HandleLook()
         {
             var lookDirection = lookInput.action.ReadValue<Vector2>();
