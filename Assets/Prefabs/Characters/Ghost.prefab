@@ -139,7 +139,8 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 64
-  killSound: {fileID: 0}
+  killSound: {fileID: 475391191603435876}
+  killPlayerEvent: {fileID: 11400000, guid: 79a274349b5e36e4ca37d09c929b47ab, type: 2}
   waypoints: []
   walkSpeed: 2
   runSpeed: 2
@@ -217,7 +218,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -226,9 +227,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 5
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

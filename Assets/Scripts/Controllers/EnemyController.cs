@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Audio;
+using Assets.Scripts.EventSystem;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,8 @@ namespace Assets.Scripts.Controllers
         private LayerMask obstacleMask;
         [SerializeField]
         private AudioController killSound;
+        [SerializeField]
+        private GameEvent killPlayerEvent;
 
         [SerializeField]
         private Transform[] waypoints;
@@ -209,6 +212,7 @@ namespace Assets.Scripts.Controllers
             if (other.CompareTag("Player") && !playerCought)
             {
                 CoughtPlayer();
+                killPlayerEvent.Raise();
                 killSound.PlayRandom();
                 Debug.Log("Player dead");
             }

@@ -1569,6 +1569,120 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586ca4ab58ba0614eb9f19157d047aea, type: 3}
+--- !u!1001 &5116377357596880465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 790029103259112225, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407259296577378350, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+      propertyPath: m_Name
+      value: Falling Shovel Trap
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d66c5654edff38f4db3cf01ebb46d589, type: 3}
+--- !u!1001 &5853157739588385386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7046655443300398259, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169171858328529327, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
+      propertyPath: m_Name
+      value: Falling Coffin Trap
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4cd8320ff64b53145be2d809252dd63d, type: 3}
 --- !u!1001 &7512455711329341645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1689,3 +1803,5 @@ SceneRoots:
   - {fileID: 1227220007}
   - {fileID: 1805537568}
   - {fileID: 1187766229}
+  - {fileID: 5116377357596880465}
+  - {fileID: 5853157739588385386}
