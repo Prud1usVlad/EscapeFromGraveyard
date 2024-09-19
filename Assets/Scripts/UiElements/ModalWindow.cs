@@ -1,4 +1,6 @@
-﻿using TMPro;
+﻿using Assets.Scripts.Controllers;
+using Assets.Scripts.Helpers;
+using TMPro;
 using UnityEngine;
 
 namespace Assets.Scripts.UiElements
@@ -8,6 +10,8 @@ namespace Assets.Scripts.UiElements
     /// </summary>
     public class ModalWindow : MonoBehaviour
     {
+        [SerializeField]
+        private ModalType type;
         [SerializeField]
         private TextMeshProUGUI header;
         [SerializeField]
@@ -30,9 +34,12 @@ namespace Assets.Scripts.UiElements
             }
         }
 
+        /// <summary>
+        /// Closes modal using ModalWindowsController.CloseModal
+        /// </summary>
         public void Close()
         {
-            Destroy(gameObject);
+            ModalWindowsController.instance.CloseModal(type);
         }
     }
 }

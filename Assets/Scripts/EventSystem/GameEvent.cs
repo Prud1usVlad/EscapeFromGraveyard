@@ -15,7 +15,7 @@ namespace Assets.Scripts.EventSystem
         protected readonly List<IGameEventListener> eventListeners =
             new List<IGameEventListener>();
 
-        public void Raise(Object parameter = null)
+        public void Raise(string parameter = null)
         {
             Debug.Log($"Event {name} raised");
             for (int i = eventListeners.Count - 1; i >= 0; i--)

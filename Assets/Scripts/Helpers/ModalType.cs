@@ -6,6 +6,5 @@
         Win,
         Died,
         CantOpenTheDoor,
-        StartingWord,
     }
 }

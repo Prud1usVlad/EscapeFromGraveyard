@@ -12,7 +12,7 @@ namespace Assets.Scripts.EventSystem
         public GameEvent @event;
 
         [Tooltip("Response to invoke when Event is raised.")]
-        public UnityEvent<Object> response;
+        public UnityEvent<string> response;
 
         private void OnEnable()
         {
@@ -24,7 +24,7 @@ namespace Assets.Scripts.EventSystem
             @event.UnregisterListener(this);
         }
 
-        public void OnEventRaised(Object parameter)
+        public void OnEventRaised(string parameter)
         {
             response?.Invoke(parameter);
         }

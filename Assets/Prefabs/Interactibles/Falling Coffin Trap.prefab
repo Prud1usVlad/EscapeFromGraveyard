@@ -238,6 +238,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationEvent: {fileID: 11400000, guid: 79a274349b5e36e4ca37d09c929b47ab, type: 2}
+  param: You've been hit by a zombie coffin
+  raiseEventManually: 1
 --- !u!1001 &9002734875844999883
 PrefabInstance:
   m_ObjectHideFlags: 0

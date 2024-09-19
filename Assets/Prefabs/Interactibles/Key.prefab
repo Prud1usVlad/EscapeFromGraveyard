@@ -209,6 +209,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationEvent: {fileID: 11400000, guid: 9daabf5a615ef0947937f488fe08bedb, type: 2}
+  param: 
+  raiseEventManually: 0
+  gameState: {fileID: 11400000, guid: 84f99203f4fd58d4bb2175a1c3d160c1, type: 2}
 --- !u!1 &5600438520801471658
 GameObject:
   m_ObjectHideFlags: 0

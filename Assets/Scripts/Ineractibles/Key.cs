@@ -1,10 +1,6 @@
-﻿using Assets.Scripts.Audio;
-using Assets.Scripts.EventSystem;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Assets.Scripts.Helpers;
+using UnityEngine;
+
 namespace Assets.Scripts.Ineractibles
 {
     /// <summary>
@@ -12,8 +8,12 @@ namespace Assets.Scripts.Ineractibles
     /// </summary>
     public class Key : Interactible
     {
+        [SerializeField]
+        private GameState gameState;
+
         protected override void Activate()
         {
+            gameState.collectedKeys++;
             sounds.PlayRandom();
             Destroy(gameObject, 0.2f);
         }

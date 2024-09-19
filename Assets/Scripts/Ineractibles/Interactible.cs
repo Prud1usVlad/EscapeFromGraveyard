@@ -14,7 +14,14 @@ namespace Assets.Scripts.Ineractibles
 
         [SerializeField]
         protected GameEvent activationEvent;
+        [SerializeField]
+        protected string param;
+        [SerializeField]
+        protected bool raiseEventManually = false;
 
+        /// <summary>
+        /// Abstract method for special logic in child clases
+        /// </summary>
         protected abstract void Activate();
 
         private void Start()
@@ -27,8 +34,9 @@ namespace Assets.Scripts.Ineractibles
         {
             if (other.CompareTag("Player"))
             {
-                activationEvent.Raise();
                 Activate();
+                if (!raiseEventManually)
+                    activationEvent.Raise(param);
             }
         }
     }

@@ -163,6 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activationEvent: {fileID: 11400000, guid: 79a274349b5e36e4ca37d09c929b47ab, type: 2}
+  param: You've had your head smashed in by a possessed shovel
+  raiseEventManually: 1
 --- !u!65 &1790081530185872116
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,6 +1,8 @@
 ﻿using Assets.Scripts.Helpers;
+using Assets.Scripts.UiElements;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 namespace Assets.Scripts.Controllers
 {
@@ -15,37 +17,63 @@ namespace Assets.Scripts.Controllers
         [SerializeField]
         private InputActionReference pauseInput;
 
+        [SerializeField]
+        private KeysCount keysCount;
+        [SerializeField]
+        private Timer timer;
+
+        public void Start() 
+        {
+            keysCount.UpdateCount();
+        }
+
         public void Update()
         {
             if (pauseInput.action.WasPressedThisFrame())
             {
-                if (PauseManager.instance.IsPaused)
-                {
-                    Unpause();
-                }
-                else
-                {
-                    Pause();
-                }
+                modals.OpenModal(ModalType.Pause);
             }
+
+            timer.UpdateTimer();
         }
 
         /// <summary>
-        /// Pauses game and shows modal
+        /// Called by EventListener on PlayerKilled event opens corresponding modal
         /// </summary>
-        public void Pause()
+        /// <param name="param">String representation of killing source</param>
+        public void OnPlayerDied(string param)
         {
-            PauseManager.instance.PauseGame();
-            modals.TriggerModal(ModalType.Pause);
+            var str = $"During your trip, the following unfortunate " +
+                $"thing happened {param}. Do you want to try again or quit the game?";
+
+            ModalWindowsController.instance.OpenModal(
+                ModalType.Died,
+                "Unfortunately, you are dead...",
+                str);
         }
 
         /// <summary>
-        /// Unpauses game and hides the modal
+        /// Called by EventListener on KeyCollected event opens corresponding modal
         /// </summary>
-        public void Unpause()
+        public void OnKeyCollected()
         {
-            PauseManager.instance.UnpauseGame();
-            modals.TriggerModal(ModalType.Pause);
+            keysCount.UpdateCount();
+        }
+
+        /// <summary>
+        /// Called by EventListener on CantOpenDoor event opens corresponding modal
+        /// </summary>
+        public void OnCantEscape()
+        {
+            ModalWindowsController.instance.OpenModal(ModalType.CantOpenTheDoor);
+        }
+
+        /// <summary>
+        /// Called by EventListener on Escaped event opens corresponding modal
+        /// </summary>
+        public void OnEscaped()
+        {
+            ModalWindowsController.instance.OpenModal(ModalType.Win);
         }
     }
 }

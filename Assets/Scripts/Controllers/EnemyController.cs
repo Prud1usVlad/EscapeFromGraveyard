@@ -212,9 +212,8 @@ namespace Assets.Scripts.Controllers
             if (other.CompareTag("Player") && !playerCought)
             {
                 CoughtPlayer();
-                killPlayerEvent.Raise();
+                killPlayerEvent.Raise("You were caught by a terrible ghost and died of fear");
                 killSound.PlayRandom();
-                Debug.Log("Player dead");
             }
         }
     }

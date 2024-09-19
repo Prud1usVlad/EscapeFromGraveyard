@@ -1,7 +1,4 @@
-﻿using Assets.Scripts.Audio;
-using Assets.Scripts.EventSystem;
-using UnityEngine;
-
+﻿
 namespace Assets.Scripts.Ineractibles
 {
     /// <summary>
@@ -13,6 +10,11 @@ namespace Assets.Scripts.Ineractibles
         {
             animator.SetTrigger("Activate");
             sounds.PlayRandom();
+        }
+
+        public void RaiseEvent()
+        {
+            activationEvent.Raise(param);
         }
     }
 }

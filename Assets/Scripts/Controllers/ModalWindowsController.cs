@@ -18,18 +18,49 @@ namespace Assets.Scripts.Controllers
         [SerializeField]
         private List<ModalDesc> modals;
 
+        public static ModalWindowsController instance;
+
         private void Awake()
         {
-            modalsDict = modals.ToDictionary(m => m.type);
+            if (instance == null)
+            {
+                instance = this;
+                modalsDict = modals.ToDictionary(m => m.type);
+            }
+            else
+            {
+                Destroy(instance);
+            }
         }
 
         /// <summary>
-        /// Triggers modal defined by type parameter (activates or destroyes it if active)
+        /// Creates modal defined by type parameter if not created already
         /// </summary>
-        /// <param name="type">Type of the modal to trigger</param>
+        /// <param name="type">Type of the modal to open</param>
         /// <param name="header">Modal header</param>
         /// <param name="content">Modal content</param>
-        public void TriggerModal(ModalType type, string header = null, string content = null)
+        public void OpenModal(ModalType type, string header = null, string content = null)
+        {
+            if (modalsDict.ContainsKey(type))
+            {
+                var modal = modalsDict[type];
+
+                if (!modal.IsActive)
+                {
+                    if (!PauseManager.instance.IsPaused)
+                        PauseManager.instance.PauseGame();
+
+                    modal.OpenModal(transform);
+                    modal.window.SetText(header, content);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Closes modal defined by type parameter if opened
+        /// </summary>
+        /// <param name="type">Type of the modal to close</param>
+        public void CloseModal(ModalType type)
         {
             if (modalsDict.ContainsKey(type))
             {
@@ -37,12 +68,10 @@ namespace Assets.Scripts.Controllers
 
                 if (modal.IsActive)
                 {
+                    if (PauseManager.instance.IsPaused)
+                        PauseManager.instance.UnpauseGame();
+
                     modal.CloseModal();
-                }
-                else
-                {
-                    modal.OpenModal(transform);
-                    modal.window.SetText(header, content);
                 }
             }
         }
@@ -78,7 +107,8 @@ namespace Assets.Scripts.Controllers
             /// </summary>
             public void CloseModal()
             {
-                window.Close();
+                Destroy(instance);
+                window = null;
                 instance = null;
             }
         }
